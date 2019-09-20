@@ -5,13 +5,13 @@ body {
 }
 h1 {
     margin: 0 auto;
-    width: 40%;
     text-align: center;
     font-size: 19vh;
 }
 .container {
     display: grid;
     grid-template-columns: repeat(3, auto);
+    grid-template-rows: none;
     align-items: center;
     width: 80%;
     height: 100vh;
@@ -26,7 +26,21 @@ svg {
     top: 0;
 }
 img {
-    width: 100%;
+    width: 90%;
     margin: auto;
     filter: url(#noise);
+    position: relative;
+    border-radius: 20px;
+}
+@media only screen and (max-width:800px) {
+    h1 {
+        font-size:9vh;
+        line-height: 25vh;
+    } .container {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, auto);
+        width: 90%;
+    } img {
+        width: 100%;
+    }
 }
