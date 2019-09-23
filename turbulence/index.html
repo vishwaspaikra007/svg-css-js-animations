@@ -20,9 +20,9 @@
     </svg>
     <div class="overlay">
         <div class="container">
-            <img class="pic" src="./img/1.jpg" alt="nature">
-            <img class="pic" src="./img/bird.jpg" alt="bird">
-            <img class="pic" src="./img/2.jpg" alt="nature">
+            <div class="imgContainer"><img class="pic" src="./img/1.jpg" alt="nature"></div>
+            <div class="imgContainer"><img class="pic" src="./img/bird.jpg" alt="bird"></div>
+            <div class="imgContainer"><img class="pic" src="./img/2.jpg" alt="nature"></div>
         </div>
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -32,8 +32,8 @@
     t1 = new TimelineMax({paused: true});
     t1.from('h1',3, {opacity:0, y:50});
     t1.staggerFrom(".pic", 3, {opacity:0, y:-120, x:-100, ease: Power4.easeOut},0.6);
-    t1.to(tb, 3, {attr:{ baseFrequency: '0 0'}},3);
-    t1.to(dis, 3, {attr:{ scale: '0'}},3);
+    t1.to(tb, 4, {attr:{ baseFrequency: '0 0'}},3);
+    t1.to(dis, 4, {attr:{ scale: '0'}},3);
     t1.play();
 </script>
 </body>
