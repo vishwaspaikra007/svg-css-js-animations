@@ -1,0 +1,67 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+svg rect {
+  fill: white;
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
+}
+
+#box {
+  -webkit-transition: 2s ease-in-out 1s;
+  transition: 2s ease-in-out 1s;
+  fill: transparent;
+}
+
+svg {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+  font-size: 8vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.scroll {
+  margin-top: 100vh;
+  height: 100vh;
+  widows: 100%;
+  position: relative;
+  z-index: 2;
+  background: white;
+  font-size: 5vw;
+  padding: 30px;
+  text-align: center;
+}
+
+.tilt {
+  width: 100%;
+  height: 150px;
+  background: green;
+  -webkit-transform: skewY(-8deg);
+          transform: skewY(-8deg);
+  top: -93px;
+  position: relative;
+}
+/*# sourceMappingURL=main.css.map */
