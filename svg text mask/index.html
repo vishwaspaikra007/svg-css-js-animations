@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- style="margin-top: 50%; transition: 3s ease-in-out" -->
         <video autoplay playsinline muted loop preload>
             <source src="./video.mp4">
         </video>
@@ -34,17 +33,35 @@
         nulla quidem, aliquam quam ad et consectetur quo.
     </div>
     <script>
-        window.onload = () => {
-            var mainText = document.querySelector('#mainText');
-            var box = document.querySelector('#box')
-            var x=100;
-            // var a = setInterval(() => {
-            //     x = x-2;
-            //     mainText.y.valueAsString = x + "%";
-            //     console.log(mainText.y)             
-            // }, 100);
-            box.style.fill = "white";
+        window.onscroll = () => {
+            textAnimation();
+            var scroll1 = document.documentElement.scrollTop;
+            var height1 = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled1 = (scroll1/height1)*100;
+            var container = document.querySelector('.container');
+            container.style.top = -scrolled1/2 + "vh"; 
         }
+        window.onload = ()=> {
+            var body = document.querySelector('body');
+            var hgt = body.clientHeight;
+            var wdt = body.clientWidth;
+            var video = document.querySelector('video');
+            if(hgt > wdt) {
+                video.style.height = "130vh";
+                video.style.width = "none";
+            } else {
+                video.style.height = "none";
+                video.style.width = "130vw";
+            } 
+            setTimeout(() => {
+                textAnimation();
+            }, 2500);
+        }
+        textAnimation = function() {
+            var box = document.querySelector('#box')
+            box.style.fill = "black";
+        }
+        
     </script>
 </body>
 </html>
